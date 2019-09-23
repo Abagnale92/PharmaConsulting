@@ -1,2 +1,10 @@
 # PharmaConsulting
-Drug Ontology &amp; Web App for consulting 
+Drug Ontology & Web App for consulting
+The Ontology was created with Protegé
+
+# Server
+Virtuoso Universal Server
+
+# Web App
+Developed with Angular & Bootstrap 
+
