@@ -1,6 +1,6 @@
 # PharmaConsulting
-Drug Ontology & Web App for consulting
-The Ontology was created with Protegé
+Drug Ontology & Web App for consulting,
+the Ontology was created with Protegé
 
 # Server
 Virtuoso Universal Server
