@@ -1,0 +1,2390 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/drugs/ontology/drugsconsulting#"
+     xml:base="http://www.semanticweb.org/drugs/ontology/drugsconsulting"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:drugsconsulting="http://www.semanticweb.org/drugs/ontology/drugsconsulting#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting">
+        <dc:creator xml:lang="it">Abagnale Giuseppe
+Prisco Antonio</dc:creator>
+        <dc:title xml:lang="it">Ontologia farmaci</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cura -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èCurata"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Fornisce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Fornisce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prescrive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prescrive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#haEffettoCollaterale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#haEffettoCollaterale">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#haPrincipioAttivo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#haPrincipioAttivo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#haSintomo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#haSintomo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#haStrutturaConsigliata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#haStrutturaConsigliata">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èSpecializzata"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#nonèCompatibile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#nonèCompatibile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#siTrova -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#siTrova">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#usatoPer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#usatoPer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#èControindicato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èControindicato">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#èCurata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èCurata">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#èIndicato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èIndicato">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#èProdotto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èProdotto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#èSpecializzata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#èSpecializzata">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Categoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Categoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#CodiceFarmaco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#CodiceFarmaco">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#DescrizioneFarmaco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#DescrizioneFarmaco">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#DescrizionePatologia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#DescrizionePatologia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dose">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Formato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Formato">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Formula -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Formula">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#ImmagineFarmaco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#ImmagineFarmaco">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#ImmaginePrincipio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#ImmaginePrincipio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#IndirizzoFarmacia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#IndirizzoFarmacia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#IndirizzoProduttore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#IndirizzoProduttore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#IndirizzoStruttura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#IndirizzoStruttura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#NomeStruttura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#NomeStruttura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Orari -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Orari">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prezzo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prezzo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ricetta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ricetta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sito -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sito">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Somministrazione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Somministrazione">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#TelefonoFarmacia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#TelefonoFarmacia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#TelefonoProduttore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#TelefonoProduttore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#TelefonoStruttura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#TelefonoStruttura">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Abortivo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Abortivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aborto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aborto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Moscati"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ginecologo"/>
+        <DescrizionePatologia>Nella donna, interruzione, spontanea o provocata, della gravidanza prima del 180° giorno; negli animali, interruzione della gravidanza prima che il feto sia vitale; nelle piante, mancato sviluppo di un organo.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Acetilsalicilico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Acetilsalicilico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifepristone"/>
+        <Formula>C9H8O4</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Aspirina_struttura.svg/1024px-Aspirina_struttura.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Clavulanico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Clavulanico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Probenecid"/>
+        <Formula>C8H9NO5</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Clavulanic_acid_structure.svg/1024px-Clavulanic_acid_structure.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Agitazione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Agitazione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Amoxicillina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Amoxicillina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciprofloxacina"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Probenecid"/>
+        <Formula>C16H19N3O5S±3H2O</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Amoxicillin2.svg/1024px-Amoxicillin2.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Analgesico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Analgesico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anemia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anestetico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anestetico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Angelini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Angelini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <IndirizzoProduttore>Viale Amelia, 70 - 00181 Roma</IndirizzoProduttore>
+        <Sito>https://www.angelini.it/wps/wcm/connect/it/home</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0815734815</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ansia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ansia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ansiolitico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ansiolitico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antibiotico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antibiotico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antidolorifico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antidolorifico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antimicrobico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antimicrobico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antinfiammatorio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antinfiammatorio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antipiretico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antipiretico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antivirale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Antivirale"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento_cutaneo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento_cutaneo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento_occhio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento_occhio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Artrite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Artrite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Sant&apos;Anna"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ortopedico"/>
+        <DescrizionePatologia>Processo morboso, acuto o cronico, di natura soltanto o prevalentemente infiammatoria, che colpisce i varî tessuti delle articolazioni: mono-a., poli-a., a seconda che interessi una o più articolazioni; a. tubercolare; a. reumatica, v. reumatico; a. reumatoide, v. reumatoide; a. deformante, denominazione impropria per artrosi.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Asma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Asma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aspirina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aspirina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diarrea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Acetilsalicilico"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brividi"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolori_muscolari"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_testa"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Asma"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gravidanza"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mastocitosi"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#BAYER"/>
+        <Categoria>Antinfiammatorio</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">004763037</CodiceFarmaco>
+        <DescrizioneFarmaco>Terapia sintomatica degli stati febbrili e delle sindromi influenzali e da raffreddamento. Trattamento sintomatico di mal di testa e di denti, nevralgie, dolori mestruali, dolori reumatici e muscolari.</DescrizioneFarmaco>
+        <Dose>1-2 compresse come dose singola, ripetendo, se necessario, la dose ad intervalli di 4-8 ore fino a 2- 3 volte al giorno.
+
+Le compresse vanno sempre prese con acqua, tè, limonata, etc.
+
+1-2 compresse come dose singola , ripetendo, se necessario, la dose ad intervalli di 4-8 ore fino a 3-4 volte al giorno.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://www.vitamincenter.it/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/a/s/aspirina_20_effervescente.png</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.50</Prezzo>
+        <Ricetta>No</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Augmentin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Augmentin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_stomaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vomito"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Amoxicillina"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_respiratoria"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_denti"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Itterizia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mononucleosi"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bronchite"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cistite"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#GlaxoSmithKline"/>
+        <Categoria>Antibiotico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">026089211</CodiceFarmaco>
+        <DescrizioneFarmaco>Augmentin è indicato nel trattamento delle seguenti infezioni negli adulti e nei bambini:
+Sinusite batterica acuta (diagnosticate in modo adeguato)
+Otite media acuta
+Esacerbazioni acute di bronchiti croniche (diagnosticate in modo adeguato)
+Polmonite acquisita in comunità
+Cistite
+Pielonefrite
+Infezioni della pelle e dei tessuti molli in particolare cellulite, morsi di animale, ascesso dentale grave con celluliti diffuse
+Infezioni ossee ed articolari, in particolare osteomielite.
+Si devono tenere in considerazione le linee-guida ufficiali sull’uso appropriato degli agenti antibatterici.</DescrizioneFarmaco>
+        <Dose>Adulti e bambini di peso ≥ 40 kg
+Dosi raccomandate:
+dose standard: (per tutte le indicazioni) 875 mg/125 mg due volte al giorno.
+dose più alta – (in particolare per infezioni quali otite media, sinusite, infezioni del tratto respiratorio inferiore ed infezioni del tratto urinario): 875 mg/125 mg tre volte al giorno.
+Bambini di peso &lt;40 kg
+Si raccomanda che i bambini siano trattati con Augmentin compresse, sospensione o bustine pediatriche.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://www.my-personaltrainer.it/thumbs/700x700/https://www.my-personaltrainer.it/images/farmaci/Augmentin.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#BAYER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#BAYER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <IndirizzoProduttore>Via Vallone, 84019 Vietri sul Mare SA</IndirizzoProduttore>
+        <Sito>https://www.bayer.it/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">089761333</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Via Sergente de Pascale, 74</IndirizzoFarmacia>
+        <Orari>Da lunedì a domenica 8.30 - 13.00, 16.20 - 20.00
+Giorno di chiusura mercoledì</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">081955216</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bristol-Myers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bristol-Myers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <IndirizzoProduttore>Via Virgilio Maroso, 50 – Roma</IndirizzoProduttore>
+        <Sito>https://www.bms.com/it</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">06503961</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brividi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brividi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bronchite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bronchite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haSintomo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_respiratoria"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_Gemelli"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pneumologo"/>
+        <DescrizionePatologia>Infiammazione dei bronchi, provocata da agenti infettivi (virus, batterî, miceti, micoplasmi) o dall’inalazione di sostanze irritanti (polveri, gas asfissianti, ecc.); può costituire un’entità morbosa autonoma o far parte del quadro clinico di malattie infettive (morbillo, tifo, ecc.) o di altre condizioni morbose; è prevalentemente localizzata alle grosse vie aeree (tracheobronchite), alle piccole ramificazioni bronchiali (bronchiolite), o uniformemente distribuita (bronchite diffusa). A seconda della causa morbigena e delle condizioni generali dell’organismo, può avere decorso acuto, subacuto, cronico.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bruciore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bruciore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brufen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brufen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Costipazione"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vertigine"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ibuprofene"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolori_muscolari"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_denti"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_schiena"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_testa"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Raffreddore"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_cardiaca"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Artrite"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatismo"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#MYLAN"/>
+        <Categoria>Antinfiammatorio</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">044356018</CodiceFarmaco>
+        <DescrizioneFarmaco>Trattamento sintomatico del dolore acuto di grado lieve e moderato.</DescrizioneFarmaco>
+        <Dose>Adulti e adolescenti sopra i 15 anni: 1 bustina, in dose singola, o ripetuta 2-3 volte al giorno, nelle forme dolorose di maggiore intensità.
+La durata della terapia deve essere limitata al superamento dell’episodio doloroso.</Dose>
+        <Formato>Granulato</Formato>
+        <ImmagineFarmaco>https://media.farmae.it/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/r/brufen.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.00</Prezzo>
+        <Ricetta>No</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bupisen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bupisen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Capogiro"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_respiratoria"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bupivacaina"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_alle_articolazioni"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_toracico"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_all&apos;orecchio"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Poliomielite"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Setticemia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tubercolosi"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tubercolosi"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Galenica_Senese"/>
+        <Categoria>Anestetico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">034171025</CodiceFarmaco>
+        <DescrizioneFarmaco>BUPISEN può essere utilizzato in ogni tipo di anestesia periferica:
+infiltrazione locale tronculare, loco-regionale
+blocco simpatico
+blocco endovenoso retrogrado e blocco endoarterioso (limitatamente alla forma senza vasocostrittore)
+peridurale, sacrale
+spinale subaracnoidea.
+BUPISEN è quindi indicato in tutti gli interventi della chirurgia generale, ortopedica, oculistica, otorinolaringoiatrica, stomatologica, ostetrico-ginecologica, dermatologica, sia impiegata da sola che associata a narcosi.</DescrizioneFarmaco>
+        <Dose>BUPISEN è solitamente usata in dosaggi minimi, variabili secondo le indicazioni, da 2-3 mg a 100-150 mg</Dose>
+        <Formato>Liquido per iniezioni</Formato>
+        <ImmagineFarmaco>https://www.galenicasenese.it/web/image/1641</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Endovena</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bupivacaina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bupivacaina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cloramfenicolo"/>
+        <Formula>C18H28N2O</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bupivacaine_Structural_Formulae.png/800px-Bupivacaine_Structural_Formulae.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Piazza XXIV Maggio, 6</IndirizzoFarmacia>
+        <Orari>Da martedì a domenica 8.30 - 13.00, 16.20 - 20.00
+Giorno di chiusura lunedì</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">081967297</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Capogiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Capogiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cemirit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cemirit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diarrea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Acetilsalicilico"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento_cutaneo"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_testa"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gravidanza"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sindrome_di_Reye"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nevralgia"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatismo"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#BAYER"/>
+        <Categoria>Antinfiammatorio</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">022360034</CodiceFarmaco>
+        <DescrizioneFarmaco>Affezioni reumatiche caratterizzate da algie e flogosi: poliartrite cronica progressiva, poliartrite acuta (malattia reumatica) artrite reumatoide e sue varietà, artropatie degenerative, reumatismo muscolare.
+Terapia sintomatica e coadiuvante delle forme influenzali, delle malattie da raffreddamento e degli stati febbrili.</DescrizioneFarmaco>
+        <Dose>1 capsula 2-3 volte al giomo.</Dose>
+        <Formato>Capsule</Formato>
+        <ImmagineFarmaco>https://www.risparmiainrete.it/wp-content/uploads/2018/02/FARMACO-EQUIVALENTE1.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.50</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Piazza Guglielmo Marconi, 10 - Sarno(SA)</IndirizzoFarmacia>
+        <Orari>Da lunedì a domenica 8.30 - 13.00, 16.20 - 20.00
+Giorno di chiusura martedì</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">081967942</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Chemioterapici -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Chemioterapici"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciprofloxacina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciprofloxacina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Amoxicillina"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sertralina"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sildenafil"/>
+        <Formula>C17H18FN3O3</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Ciprofloxazin.svg/1024px-Ciprofloxazin.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciproxin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciproxin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Crampi"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diarrea"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciprofloxacina"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Urinare_con_urgenza"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_all&apos;orecchio"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Itterizia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cistite"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#BAYER"/>
+        <Categoria>Antibiotico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">026664019</CodiceFarmaco>
+        <DescrizioneFarmaco>Ciproxin è indicato per le infezioni dell&apos;apparato genitale.
+ Prima di iniziare la terapia, si deve prestare particolare attenzione alle informazioni disponibili sulla resistenza alla ciprofloxacina.</DescrizioneFarmaco>
+        <Dose>2 compresse al giorno ogni 8 ore.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://www.my-personaltrainer.it/thumbs/700x700/https://www.my-personaltrainer.it/images/farmaci/Ciproxin.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cistite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cistite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_Gemelli"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ginecologo"/>
+        <DescrizionePatologia>Infiammazione, acuta o cronica, della vescica urinaria, provocata nella maggior parte dei casi da microrganismi, più raram. da parassiti, da sostanze chimiche irritanti o da stimoli fisici.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Clavulin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Clavulin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Costipazione"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insonnia"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Clavulanico"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Amoxicillina"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_respiratoria"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_denti"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_all&apos;orecchio"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Itterizia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mononucleosi"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bronchite"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cistite"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Angelini"/>
+        <Categoria>Antibiotico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">026138230</CodiceFarmaco>
+        <Dose>Per adulti e bambini di peso ≥ 40 kg questa formulazione di CLAVULIN fornisce una dose totale giornaliera di 1750 mg di amoxicillina/250 mg di acido clavulanico con dosaggio di due volte al giorno e di 2625 mg di amoxicillina/375 mg di acido clavulanico per il dosaggio di tre volte al giorno, quando somministrato come raccomandato di seguito.</Dose>
+        <Formato>Polvere</Formato>
+        <ImmagineFarmaco>Clavulin è un antibiotico che funziona uccidendo i batteri che causano infezioni. Contiene due diversi medicinali chiamati amoxicillina e acido clavulanico. L&apos;amoxicillina appartiene ad un gruppo di medicinali chiamati \&quot;penicilline\&quot; la cui attività può a volte essere bloccata (vengono resi inattivi). L&apos;altro componente attivo (acido clavulanico) impedisce che questo avvenga.</ImmagineFarmaco>
+        <ImmagineFarmaco>http://www.antsafety.com/wp-content/uploads/2013/01/C135080080.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cloramfenicolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cloramfenicolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Paracetamolo"/>
+        <Formula>C11H12N2O5Cl2</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Chloramphenicol-2D-skeletal.png/1024px-Chloramphenicol-2D-skeletal.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Via S. Valentino 30</IndirizzoFarmacia>
+        <Orari>Da lunedì a domenica 8.30 - 13.00, 16.20 - 20.00
+Giorno di chiusura giovedì</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">081946582</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Colbiocin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Colbiocin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bruciore"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Irritazione"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cloramfenicolo"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Arrossamento_occhio"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito_agli_occhi"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gravidanza"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Congiuntivite"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#S.I.F.I."/>
+        <Categoria>Antimicrobico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">020605034</CodiceFarmaco>
+        <DescrizioneFarmaco>Trattamento delle infezioni oculari esterne quali congiuntiviti catarrali, purulente, tracoma, blefariti, blefarocongiuntiviti, cheratiti batteriche, ulcere corneali settiche, dacriocistiti.</DescrizioneFarmaco>
+        <Dose>3 – 4 applicazioni giornaliere nel fornice congiuntivale.</Dose>
+        <Formato>Gocce</Formato>
+        <ImmagineFarmaco>https://www.dottnet.it/content/gallery/0092694-colbiocin-confezione.png</ImmagineFarmaco>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Topica</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Congiuntivite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Congiuntivite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haSintomo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gonfiore_palpebre"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_di_Napoli"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Oculista"/>
+        <DescrizionePatologia>La congiuntivite, la causa più frequente di occhio rosso, è un&apos;infiammazione dello strato mucoso più esterno che riveste la sclera dell&apos;occhio e la superficie interna della palpebra. Essendo il tessuto più esposto agli agenti esterni, può andare incontro ad infiammazione in seguito ad infezioni (batteri, virus, miceti, chlamydia, protozoi), a disfunzioni del film lacrimale precorneale, a reazioni allergiche e a contatto con sostanze o vapori irritanti o tossici. Oltre al colorito rossastro caratteristico, si possono associare fastidiosi sintomi quali dolore, bruciore e prurito. L&apos;occhio interessato può presentare aumento della lacrimazione e apparire \&quot;bloccato\&quot; al mattino da secrezioni muco-purulente. Può verificarsi inoltre un gonfiore sulla parte bianca dell&apos;occhio (chemosi congiuntivale), soprattutto in presenza di reazioni allergiche. Il prurito oculare è il sintomo più comune nei casi dovuti ad allergia. La congiuntivite può interessare uno o entrambi gli occhi.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Contraccettivi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Contraccettivi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Costipazione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Costipazione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Crampi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Crampi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Debolezza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Debolezza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Debolezza_fisica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Debolezza_fisica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Raffaele"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Neurologo"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Psichiatra"/>
+        <DescrizionePatologia>Il disturbo depressivo maggiore (in inglese, Major depressive disorder - MDD), noto anche come depressione clinica, depressione maggiore, depressione endogena, depressione unipolare, disturbo unipolare o depressione ricorrente (nel caso di ripetuti episodi) è una patologia psichiatrica o disturbo dell&apos;umore, caratterizzata da episodi di umore depresso accompagnati principalmente da una bassa autostima e perdita di interesse o piacere nelle attività normalmente piacevoli (anedonia).</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Piazza Garibaldi, 33 - Sarno(SA)</IndirizzoFarmacia>
+        <Orari>Da lunedì a domenica 8.30 - 13.00, 16.20 - 20.00
+Giorno di chiusura venerdì</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">081945616</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diabete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diabete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diarrea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diarrea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diazepam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diazepam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Selegilina"/>
+        <Formula>C16H13ClN2O</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Diazepam.svg/800px-Diazepam.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diclofenac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diclofenac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifepristone"/>
+        <Formula>C14H11Cl2NO2</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Diclofenac.svg/1024px-Diclofenac.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_respiratoria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_respiratoria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Disfunzione_erettile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Disfunzione_erettile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Moscati"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Urologo"/>
+        <DescrizionePatologia>La disfunzione erettile è l&apos;incapacità di avere e/o mantenere un&apos;erezione soddisfacente, pur in presenza di un buon desiderio sessuale.
+Disfunzione ErettileProblema abbastanza diffuso tra gli uomini di età superiore ai 40 anni, la disfunzione erettile può dipendere da: particolari condizioni fisiche (es: diabete, arteriosclerosi, sclerosi multipla ecc.), l&apos;assunzione di determinati medicinali (es: diuretici, antipsicotici, corticosteroidi, farmaci citotossici ecc.), problemi di natura psicologica (es: depressione, ansia ecc.) e altre cause ancora (es: abuso di alcol, uso di droghe, tabagismo ecc.).
+Una diagnosi accurata di disfunzione erettile si basa sempre su un accurato esame obiettivo e su una scrupolosa anamnesi. 
+Il trattamento della disfunzione erettile comprende una terapia causale, cioè mirata a curare la causa all&apos;origine delle problematiche d&apos;erezione, e una terapia sintomatica, il cui obiettivo è aiutare il paziente nell&apos;avere un&apos;erezione.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_alle_articolazioni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_alle_articolazioni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_continuo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_continuo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_toracico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_toracico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolori_muscolari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolori_muscolari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Corso Giovanni Amendola, 39</IndirizzoFarmacia>
+        <Orari>Da lunedì a domenica 8.30 - 13.00, 16.20 - 20.00
+Giorno di chiusura sabato</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">081967938</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#EXELGYN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#EXELGYN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <IndirizzoProduttore>10 Rue René Anjolvy, 94250 Gentilly, Francia</IndirizzoProduttore>
+        <Sito>http://www.exelgyn.com/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33172467246</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Efferalgan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Efferalgan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vertigine"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Paracetamolo"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Malessere_generale"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Raffreddore"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anemia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Epatite"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bristol-Myers"/>
+        <Categoria>Antinfiammatorio</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">026608087</CodiceFarmaco>
+        <DescrizioneFarmaco>Trattamento sintomatico del dolore da lieve a moderato e delle condizioni febbrili nei lattanti.</DescrizioneFarmaco>
+        <Dose>Il dosaggio è di una supposta da 80 mg, da ripetere, se necessario, dopo un intervallo di almeno 6 ore, senza superare le 3 supposte al giorno per lattanti di peso inferiore a 5 kg e le 4 supposte al giorno per lattanti di peso uguale o superiore a 5 kg.</Dose>
+        <Formato>Supposte</Formato>
+        <ImmagineFarmaco>https://www.pharmily.it/2726-large_default/efferalgan-supposte-300-mg-bambini.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.30</Prezzo>
+        <Ricetta>No</Ricetta>
+        <Somministrazione>Rettale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Epatite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Epatite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Epilessia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Epilessia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Fastidio_intimo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Fastidio_intimo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Formicolio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Formicolio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Galenica_Senese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Galenica_Senese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <IndirizzoProduttore>Via Cassia Nord, 388, 53014 Monteroni d&apos;Arbia SI</IndirizzoProduttore>
+        <Sito>https://www.galenicasenese.it/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">057737281</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ginecologo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ginecologo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aborto"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cistite"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Augmentin"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciproxin"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Clavulin"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifegyne"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#GlaxoSmithKline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#GlaxoSmithKline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <IndirizzoProduttore>Via A. Fleming, 2 – 37135 Verona</IndirizzoProduttore>
+        <Sito>https://www.gsk.com/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3335293034</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gonfiore_palpebre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gonfiore_palpebre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gonfiore_pelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gonfiore_pelle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gravidanza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gravidanza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#IEO_di_Milano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#IEO_di_Milano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Via S. Luca, 8, 20122 Milano MI</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">02574891</TelefonoStruttura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ibuprofene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ibuprofene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Paracetamolo"/>
+        <Formula>C13H18O2</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ibuprofen2.svg/1024px-Ibuprofen2.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Immunosoppressivo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Immunosoppressivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Impotenza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Impotenza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Raffaele"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico_di_base"/>
+        <DescrizionePatologia>Malattia infettiva contagiosa delle vie respiratorie, endemica ed epidemica, di origine virale, a carattere acuto.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Inibitore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Inibitore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insonnia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insonnia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_cardiaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_cardiaca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ipovolemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ipovolemia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Irritazione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Irritazione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Itterizia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Itterizia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Lassativo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Lassativo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#MYLAN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#MYLAN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <IndirizzoProduttore>VIA VITTOR PISANI, 20, 20124 – MILANO (MI)</IndirizzoProduttore>
+        <Sito>https://www.mylan.it/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800959500</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_denti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_denti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_schiena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_schiena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_stomaco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_stomaco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_testa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_testa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Malessere_generale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Malessere_generale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mastocitosi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mastocitosi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico_di_base -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico_di_base">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aspirina"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Augmentin"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brufen"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cemirit"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Efferalgan"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tachipirina"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Voltaren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Miastenia_gravis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Miastenia_gravis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifegyne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifegyne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Crampi"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Debolezza_fisica"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Malessere_generale"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Perdite_di_sangue"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vomito"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifepristone"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anemia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Asma"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diabete"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Aborto"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#EXELGYN"/>
+        <Categoria>Abortivo</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">038704021</CodiceFarmaco>
+        <DescrizioneFarmaco>Per l’interruzione della gravidanza, il mifepristone anti-progesterone e l’analogo delle prostaglandine possono essere prescritti e somministrati solo nel rispetto delle normative e dei regolamenti nazionali presenti nei vari paesi.
+
+– lnterruzione medica di gravidanza intrauterina in corso.
+
+Usato in associazione sequenziale con un analogo delle prostaglandine, fino al 63° giorno di amenorrea (vedere paragrafo 4.2).
+
+-– Ammorbidimento e dilatazione della cervice uterina prima dell’interruzione chirurgica della gravidanza nel corso del primo trimestre.
+
+– Preparazione all’azione degli analoghi delle prostaglandine nell’interruzione terapeutica della gravidanza</DescrizioneFarmaco>
+        <Dose>Il modo di somministrazione deve essere il seguente:
+Fino al 49° giorno di amenorrea:
+Il mifepristone è assunto in un’unica dose orale da 600 mg (cioè 3 compresse da 200 mg ciascuna) seguita, a 36-48 ore di distanza, dalla somministrazione dell’analogo delle prostaglandine: misoprostolo 400 μg per via orale, oppure gemeprost, 1 mg per via vaginale.
+
+Tra il 50° e il 63° giorno di amenorrea:
+Il mifepristone è assunto in un’unica dose orale da 600 mg (cioè 3 compresse da 200 mg ciascuna) seguita, a 36-48 ore di distanza, dalla somministrazione dell’analogo delle prostaglandine gemeprost 1 mg per via vaginale.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>http://www.editorialeilgiglio.it/wp-content/uploads/2014/08/mifegyne.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifepristone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mifepristone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Acetilsalicilico"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diclofenac"/>
+        <Formula>C29H35NO2</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Mifepristone.svg/1024px-Mifepristone.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mononucleosi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mononucleosi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmacia"/>
+        <IndirizzoFarmacia>Strada Provinciale Giovanni Amendola, 119</IndirizzoFarmacia>
+        <Orari>Da lunedì a domenica 8.30 - 13.00, 16.20 - 20.00</Orari>
+        <TelefonoFarmacia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">089019818819</TelefonoFarmacia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mucolitico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mucolitico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nervosismo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nervosismo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Neurologo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Neurologo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nevralgia"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tachipirina"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Valium"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Zoloft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nevralgia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nevralgia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Giovanni"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Neurologo"/>
+        <DescrizionePatologia>Per nevralgia (dal greco neyron=nervo e algos=dolore), in campo medico, si intende un dolore non nocicettivo, ovvero non determinato dall&apos;attivazione dei recettori del dolore in un distretto corporeo, bensì da una patologia del nervo. Il dolore è pertanto riferito al territorio di innervazione del nervo affetto (la persona riferisce di sentire il dolore non lungo il percorso del nervo, ma nella sede in cui il nervo termina).</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Novartis_Farma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Novartis_Farma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <IndirizzoProduttore>Largo Umberto Boccioni, 1 – 21040 Origgio (VA)</IndirizzoProduttore>
+        <Sito>https://www.novartis.it/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0815354111</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Oculista -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Oculista">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Congiuntivite"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Colbiocin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ortopedico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ortopedico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Artrite"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brufen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Moscati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Moscati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Contrada Amoretta, 83100 Avellino AV</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0825203426</TelefonoStruttura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Giovanni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Giovanni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Via San Leonardo, Salerno SA</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">089671111</TelefonoStruttura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Raffaele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_San_Raffaele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Via Giovanni Giolitti, 16, 00185 Roma RM</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0652253535</TelefonoStruttura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Paracetamolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Paracetamolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cloramfenicolo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ibuprofene"/>
+        <Formula>C8H9NO2</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/N-Acetyl-p-aminophenol.svg/1024px-N-Acetyl-p-aminophenol.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Perdita_di_energie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Perdita_di_energie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Perdite_di_sangue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Perdite_di_sangue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pfizer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pfizer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <IndirizzoProduttore>Via Isonzo, 71 – 04100 Latina</IndirizzoProduttore>
+        <Sito>http://www.pfizer.it/cont/pfizer-italia/pfizer-italia.asp</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">06331821</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pneumologo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pneumologo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bronchite"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tubercolosi"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Augmentin"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bupisen"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Clavulin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_Gemelli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_Gemelli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Largo Agostino Gemelli, 8, 00168 Roma RM</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0630151</TelefonoStruttura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_di_Napoli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Policlinico_di_Napoli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Piazza Luigi Miraglia, 2, 80138 Napoli NA</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800177780</TelefonoStruttura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Poliomielite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Poliomielite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Probenecid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Probenecid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Acido_Clavulanico"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Amoxicillina"/>
+        <Formula>C13H19NO4S</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Probenecid_Structural_Formula_V.1.svg/1024px-Probenecid_Structural_Formula_V.1.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito_agli_occhi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Prurito_agli_occhi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Psichiatra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Psichiatra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Valium"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Zoloft"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Raffreddore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Raffreddore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatismo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatismo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Sant&apos;Anna"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatologo"/>
+        <DescrizionePatologia>Il termine &quot;reumatismo&quot; deriva dal greco antico e significa flusso o scorrimento. Questa etimologia riflette da un lato la credenza dell’antica medicina che il reumatismo derivi da determinati fluidi viscosi che &quot;scorrono&quot; all’interno del corpo. Dall’altro lato, questo termine indica anche la tendenza dei sintomi reumatici, in particolare del dolore, a interessare diversi tessuti e aree del corpo durante il decorso della malattia. Per questo il reumatismo viene anche descritto come un &quot;dolore che scorre&quot;.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatologo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatologo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatismo"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Brufen"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cemirit"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Voltaren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Rigidità -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Rigidità">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Rinite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Rinite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Roche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Roche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <IndirizzoProduttore>Piazza Durante 11 – 20131 Milano</IndirizzoProduttore>
+        <Sito>https://www.roche.it/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0810663265</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#S.I.F.I. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#S.I.F.I.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Produttore"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <Fornisce rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <IndirizzoProduttore>Via Ercole Patti, 36 – 95025 Aci S. Antonio (CT)</IndirizzoProduttore>
+        <Sito>https://www.sifigroup.com/</Sito>
+        <TelefonoProduttore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0144950812</TelefonoProduttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Secchezza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Secchezza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sedativo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sedativo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Selegilina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Selegilina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diazepam"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sertralina"/>
+        <Formula>(S)-N-methyl-N-(1-methyl-2-phenyl-ethyl)-prop-2-yn-1-amine</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Selegilin.svg/1024px-Selegilin.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sertralina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sertralina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciprofloxacina"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Selegilina"/>
+        <Formula>C17H17Cl2N</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sertraline_Structural_Formulae.png/1024px-Sertraline_Structural_Formulae.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Setticemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Setticemia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sildenafil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sildenafil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#PrincipioAttivo"/>
+        <nonèCompatibile rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ciprofloxacina"/>
+        <Formula>C22H30N6O4S</Formula>
+        <ImmaginePrincipio>https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Sildenafil.svg/1024px-Sildenafil.svg.png</ImmaginePrincipio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sindrome_di_Reye -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sindrome_di_Reye">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Stanchezza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Stanchezza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tachipirina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tachipirina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Debolezza_fisica"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diarrea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Paracetamolo"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cacciapuoti"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Donnarumma"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_alle_articolazioni"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolori_muscolari"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Febbre"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_denti"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Mal_di_testa"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Anemia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ipovolemia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Miastenia_gravis"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Influenza"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nevralgia"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Angelini"/>
+        <Categoria>Antinfiammatorio, Analgesico, Antipiretico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">012745093</CodiceFarmaco>
+        <DescrizioneFarmaco>Come antipiretico: trattamento sintomatico di affezioni febbrili quali l&apos;influenza, le malattie esantematiche, le affezioni acute del tratto respiratorio, ecc.
+Come analgesico: cefalee, nevralgie, mialgie ed altre manifestazioni dolorose di media entità, di varia origine.</DescrizioneFarmaco>
+        <Dose>Bambini di peso compreso tra 21 e 25 kg (approssimativamente tra i 6 ed i 10 anni): ½ compressa alla volta, da ripetere se necessario dopo 4 ore, senza superare le 6 somministrazioni al giorno (3 compresse).
+
+Bambini di peso compreso tra 26 e 40 kg (approssimativamente tra gli 8 ed i 13 anni): 1 compressa
+
+alla volta, da ripetere se necessario dopo 6 ore, senza superare le 4 somministrazioni al giorno.
+
+Ragazzi di peso compreso tra 41 e 50 kg (approssimativamente tra i 12 ed i 15 anni): 1 compressa alla volta, da ripetere se necessario dopo 4 ore, senza superare le 6 somministrazioni al giorno.
+
+Ragazzi di peso superiore a 50 kg (approssimativamente sopra i 15 anni): 1 compressa alla volta, da
+
+ripetere se necessario dopo 4 ore, senza superare le 6 somministrazioni al giorno.
+
+Adulti: 1 compressa alla volta, da ripetere se necessario dopo 4 ore, senza superare le 6 somministrazioni al giorno. Nel caso di forti dolori o febbre alta, 2 compresse da 500 mg da ripetere se necessario dopo non meno di 4 ore.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://www.pharmamedix.com/img/formeFarmaceutiche/tachipirina_compresse_500.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.30</Prezzo>
+        <Ricetta>No</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tensione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tensione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tosse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tosse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tubercolosi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tubercolosi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+        <haStrutturaConsigliata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#IEO_di_Milano"/>
+        <èCurata rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pneumologo"/>
+        <DescrizionePatologia>La tubercolosi (Tb) è una malattia infettiva e contagiosa, causata da un batterio, il Mycobacterium tuberculosis, chiamato comunemente Bacillo di Koch (dal nome del medico tedesco che lo scoprì). Nella maggior parte dei casi interessa i polmoni ma possono essere coinvolte altre parti del corpo. Se non trattata la Tb può portare al decesso.</DescrizionePatologia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Patologia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Urinare_con_urgenza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Urinare_con_urgenza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Urologo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Urologo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Medico"/>
+        <Cura rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Disfunzione_erettile"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Augmentin"/>
+        <Prescrive rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Viagra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Valium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Valium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Secchezza"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diazepam"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bilotta"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Agitazione"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ansia"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insonnia"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Tensione"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Roche"/>
+        <Categoria>Ansiolitico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">019995012</CodiceFarmaco>
+        <DescrizioneFarmaco>Ansia, tensione ed altre manifestazioni somatiche o psichiatriche associate con sindrome ansiosa.
+Le benzodiazepine sono indicate soltanto quando il disturbo è grave, disabilitante o sottopone il soggetto a grave disagio.</DescrizioneFarmaco>
+        <Dose>Il trattamento dovrebbe essere il più breve possibile. Il paziente dovrebbe essere rivalutato regolarmente e la necessità di un trattamento continuato dovrebbe essere valutata attentamente, particolarmente se il paziente è senza sintomi. La durata complessiva del trattamento, generalmente, non dovrebbe superare le 8-12 settimane, compreso un periodo di sospensione graduale. In determinati casi, può rendersi necessaria l&apos;estensione oltre il periodo massimo di trattamento; in caso affermativo, non dovrebbe avvenire senza rivalutazione della condizione del paziente.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://static.independent.co.uk/s3fs-public/thumbnails/image/2011/12/28/22/pg-1-valium-rex.jpg?w968h681</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vertigine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vertigine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Viagra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Viagra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gonfiore_pelle"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sildenafil"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Impotenza"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_cardiaca"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Disfunzione_erettile"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pfizer"/>
+        <Categoria>Inibitore</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">034076152</CodiceFarmaco>
+        <DescrizioneFarmaco>E&apos; indicato negli uomini adulti con disfunzione erettile, ovvero con incapacità a raggiungere o a mantenere un’erezione idonea per una attività sessuale soddisfacente.
+È necessaria la stimolazione sessuale affinché VIAGRA possa essere efficace.</DescrizioneFarmaco>
+        <Dose>La dose raccomandata è 50 mg al bisogno, da assumere circa un’ora prima dell’attività sessuale. In base all’efficacia ed alla tollerabilità, la dose può essere aumentata a 100 mg oppure ridotta a 25 mg. La dose massima raccomandata è di 100 mg. Il prodotto non deve essere somministrato più di una volta al giorno. Se VIAGRA viene assunto insieme ai pasti, l’insorgenza dell’azione può essere ritardata rispetto all’assunzione a digiuno.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://m2.ukmeds.co.uk/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/v/i/viagra_100mg_-_4_tablets-3_1.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Voltaren -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Voltaren">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Bruciore"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Eruzione_cutanea"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Nausea"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diclofenac"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Cofaser"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Monteleone"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_alle_articolazioni"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolori_muscolari"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Asma"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Gravidanza"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_epatica"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Rinite"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ulcera_peptica"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Reumatismo"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Novartis_Farma"/>
+        <Categoria>Analgesico, Antinfiammatorio</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">034548014</CodiceFarmaco>
+        <DescrizioneFarmaco>100 g di Voltaren Emulgel 1% gel contengono 1,16 g di diclofenac dietilammonio, equivalenti a 1 g di diclofenac sodico.
+Trattamento locale di stati dolorosi e flogistici di natura reumatica o traumatica delle articolazioni, dei muscoli, dei tendini e dei legamenti.</DescrizioneFarmaco>
+        <Dose>Applicare Voltaren Emulgel 1% gel 3 o 4 volte al giomo sulla zona da trattare, frizionando leggermente. Il quantitativo da applicare dipende dalla dimensione della parte interessata. Per esempio 2-4 g di Voltaren Emulgel 1% gel (quantitativo di dimensioni variabili tra una ciliegia e una noce) sono sufficienti per trattare un’area di 400-800 cm² . Dopo l’applicazione, sciacquarsi le mani, altrimenti risulteranno anch’esse trattate con il gel.</Dose>
+        <Formato>Pomata</Formato>
+        <ImmagineFarmaco>https://www.farmaciafornari.it/1126-large_default/voltaren-emulgel-1-gel-150-grammi.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.50</Prezzo>
+        <Ricetta>No</Ricetta>
+        <Somministrazione>Transcutanea</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vomito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Vomito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Zoloft -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Zoloft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Farmaco"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Crampi"/>
+        <haEffettoCollaterale rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Difficoltà_a_urinare"/>
+        <haPrincipioAttivo rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sertralina"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Centrale"/>
+        <siTrova rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Derkeshli"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ansia"/>
+        <usatoPer rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insonnia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Diabete"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Epilessia"/>
+        <èControindicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Insufficienza_renale"/>
+        <èIndicato rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Depressione"/>
+        <èProdotto rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Pfizer"/>
+        <Categoria>Ansiolitico</Categoria>
+        <CodiceFarmaco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">027753122</CodiceFarmaco>
+        <DescrizioneFarmaco>Episodi depressivi maggiori. Prevenzione della ricorrenza di episodi depressivi maggiori.
+Disturbo da attacchi di panico, associato o meno ad agorafobia.
+Disturbo ossessivo-compulsivo (OCD) in pazienti adulti e nei pazienti pediatrici di età compresa tra 6 e 17 anni.
+Disturbo da ansia sociale.
+Disturbo Post-Traumatico da Stress (PTSD).</DescrizioneFarmaco>
+        <Dose>La terapia deve essere iniziata alla dose di 25 mg/die. Dopo una settimana, la dose deve essere aumentata a 50 mg una volta al giorno. È stato dimostrato che questo regime posologico riduce la frequenza degli effetti indesiderati che caratterizzano il disturbo da attacchi di panico nella fase iniziale del trattamento.</Dose>
+        <Formato>Compresse</Formato>
+        <ImmagineFarmaco>https://www.my-personaltrainer.it/thumbs/700x700/https://www.my-personaltrainer.it/images/farmaci/Zoloft.jpg</ImmagineFarmaco>
+        <Prezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.00</Prezzo>
+        <Ricetta>Si</Ricetta>
+        <Somministrazione>Orale</Somministrazione>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_all&apos;orecchio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Dolore_all&apos;orecchio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Sintomo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Sant&apos;Anna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/drugs/ontology/drugsconsulting#Ospedale_Sant&apos;Anna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/drugs/ontology/drugsconsulting#StrutturaOspedaliera"/>
+        <IndirizzoStruttura>Corso Spezia, 60, 10126 Torino TO</IndirizzoStruttura>
+        <TelefonoStruttura rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0116331633</TelefonoStruttura>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

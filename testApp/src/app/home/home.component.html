@@ -1,0 +1,92 @@
+
+
+  <div class="container">
+
+      <!-- Jumbotron Header -->
+      <!-- <header class="jumbotron my-4">
+          <h1 class="display-3">Home</h1>
+          <p class="lead">Home</p>
+          <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+      </header> -->
+
+      <img src=..\..\assets\drugs.jpg width=1110 height=300 >
+
+
+        <h1> Inserisci il tuo sintomo </h1>
+
+        <p class="lead"> Avrai in risposta una lista di
+          farmaci adatti ad alleviare i tuoi disturbi!
+        </p>
+
+        <form class="form-inline" #symptomform="ngForm" (ngSubmit)="onSubmit()">
+              <input class="form-control" type="text" placeholder="Sintomo..."  [(ngModel)]="sintomoTitle" [ngModelOptions]="{standalone: true}">
+              <button type="submit" class="btn btn-primary "> Vai </button>
+        </form>
+
+
+        <div *ngIf="instruction">
+        <h2> Consigli per l'uso </h2>
+
+            <p>
+              Pharma Consulting è una guida che permette di ricercare farmaci acquistabili in farmacia con o senza ricetta del medico.
+            </p>
+
+            <p>
+              La nostra home-page è molto intuitiva: nella barra di ricerca si può scrivere il sintomo che si vuole curare
+              e una volta cliccato con il mouse sul pulsante “VAI”, verranno indicati i farmaci utili per quel sintomo.
+            </p>
+
+            <p>
+              Ad esempio si potrebbe inserire il sintomo: “Mal di testa” e ottenere come farmaci: “Tachipirina”, “Efferalgan”, “Aspirina” ecc.
+            </p>
+
+            <p>
+              Una volta ottenuta la lista di farmaci adatti a curare il vostro sintomo,
+              è possibile selezionare un farmaco e accedere ad un’ulteriore pagina contenente tutte le informazioni che lo riguardano:
+            </p>
+
+            <ul>
+              <li>Nome commerciale del farmaco</li>
+              <li>Descrizione</li>
+              <li>Codice ATC</li>
+              <li>Principio Attivo</li>
+              <li>Categoria</li>
+              <li>Formato</li>
+              <li>Somministrazione</li>
+              <li>Dose</li>
+              <li>Controindicazioni</li>
+              <li>Effetti indesiderati</li>
+              <li>Produttore</li>
+              <li>Le nostre Farmacie</li>
+              </ul>
+
+              <p>
+              Nelle altre pagine del sito è possibile effettuare ulteriori ricerche come:
+              </p>
+
+              <ul>
+              <li>Ricerca di un farmaco per nome o categoria</li>
+              <li>Ricerca di una Patologia</li>
+              <li>Ricerca di interazioni tra farmaci</li>
+              </ul>
+
+          </div>
+
+          <div class="row" *ngIf="visible">
+            <div class="col-lg-4 portfolio-item" *ngFor="let drug of this.r2">
+              <div class="card h-100">
+                <a routerLink='/drug-details' (click)="setOnClickDrugId(drug.farmaco)">
+                  <img class="card-img-top" src="{{drug.img}}" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a routerLink='/drug-details' (click)="setOnClickDrugId(drug.farmaco)"
+                     >{{drug.farmaco}}</a>
+                  </h4>
+                  <p class="card-text">{{drug.descrizione}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  </div>
+

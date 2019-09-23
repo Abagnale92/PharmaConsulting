@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <div class="navbar-brand" >Pharma Consulting</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" routerLink="/home">Home
+               <!-- <span class="sr-only">(current)</span> -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/page1">Farmaci</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/page2">Patologie</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/interactiondrug">Interazioni tra farmaci</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/normativa">Normativa</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+  <!-- Page Content -->
+
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Pharma Consulting 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="node_modules\jquery\dist\jquery.min.js"></script>
+  <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>

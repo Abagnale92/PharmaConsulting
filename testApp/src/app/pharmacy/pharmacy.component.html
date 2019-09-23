@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="row">
+      <img src="../../assets/drugs4.jpg">
+  </div>
+
+  <h3> Le farmacie del nostro distretto </h3>
+
+    <div class="row" >
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Farmacia </th>
+                <th scope="col">Indirizzo </th>
+                <th scope="col">Telefono </th>
+                <th scope="col">Orario </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of this.r2">
+                <td>{{item.farmacia}}</td>
+                <td>{{item.indFarm}}</td>
+                <td>{{item.telFarm}}</td>
+                <td class="or">{{item.orario}}</td>
+              </tr>
+
+            </table>
+
+      </div>
+
+</div>
+

@@ -1,0 +1,61 @@
+<div class="container">
+
+<img src='../../assets/drugs5.jpg' width="1100" height="300">
+
+  <h1>Interazioni Farmacologiche</h1>
+  <p class="lead">Inserisci il nome di un farmaco o il principio attivo per trovare eventuali incompatibilità con altri principi </p>
+  <form class="form-group" #drugform="ngForm" (ngSubmit)="onSubmit(drugform.value)">
+
+      <div class="form-inline">
+          <input class="form-control" type="text" placeholder="Farmaco..." id="iFarmaco" name="farmaco" [(ngModel)]="farmaco" [ngModelOptions]="{standalone: true}" required >
+          <button type="submit" class="btn btn-primary "> Vai </button>
+      </div>
+
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="options" id="inlineRadio1" value="Nome" ngModel required checked="checked">
+          <label class="form-check-label" for="inlineRadio1">Nome</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="options" id="inlineRadio2" value="PrincipioAttivo" ngModel required >
+          <label class="form-check-label" for="inlineRadio2">Principio Attivo</label>
+      </div>
+
+  </form>
+
+
+
+
+
+<div *ngIf="eccipientVisible">
+  <h3> Formula del principio attivo :  {{this.formula}}</h3>
+  <img src="{{this.imgP}}" >
+</div>
+
+
+<h1 *ngIf="visible"> Risultati della ricerca : </h1>
+
+
+<table class="table table-striped" *ngIf="visible">
+  <thead>
+    <tr>
+      <th scope="col">Principio ricercato</th>
+      <th scope="col">Farmaco ricercato</th>
+      <th scope="col">Farmaco non compatibile</th>
+      <th scope="col">Principio attivo non compatibile</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of r2">
+      <td>{{item.principio}}</td>
+      <td>{{item.farmaco1}}</td>
+      <td>{{item.farmaco2}}</td>
+      <td>{{item.principiononcompatibile}}</td>
+    </tr>
+
+  </table>
+
+
+
+</div>

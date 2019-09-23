@@ -1,0 +1,72 @@
+<div class="container">
+
+    <div class="row">
+        <h1> {{this.producerTitle}} </h1>
+    </div>
+
+    <div class="row" >
+
+        <div class="col-lg-6">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href='{{this.website}}'> Link al sito </a>  </li>
+                <li class="list-group-item">Indirizzo: {{this.address}} </li>
+                <li class="list-group-item">Numero di telefono : {{this.number}}</li>
+
+              </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <img src="../../assets/drugs3.jpg">
+          </div>
+
+
+    </div>
+
+    <div class="row">
+      <h3> Fornisce le seguenti farmacie : </h3>
+    </div>
+
+
+    <div class="row" >
+
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Farmacia </th>
+                <th scope="col">Indirizzo </th>
+                <th scope="col">Telefono </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of this.r2">
+                <td>{{item.farmacia}}</td>
+                <td>{{item.indFarm}}</td>
+                <td>{{item.telFarm}}</td>
+              </tr>
+
+            </table>
+
+      </div>
+
+      <div class="row">
+        <h3>Farmaci prodotti :  </h3>
+      </div>
+
+
+      <div class="row" >
+          <div class="col-lg-4 portfolio-item" *ngFor="let drug of this.r3">
+            <div class="card h-100">
+              <a routerLink='/drug-details' (click)="setOnClickDrugId(drug.farmaco)">
+                <img class="card-img-top" src="{{drug.imgF}}" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a routerLink='/drug-details' (click)="setOnClickDrugId(drug.farmaco)"
+                   >{{drug.farmaco}}</a>
+                </h4>
+                <p class="card-text">{{drug.descrizione}}</p>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+

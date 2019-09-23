@@ -1,0 +1,58 @@
+
+
+  <div class="container">
+
+      <img src=..\..\assets\drugs2.jpg width=1110 height=350 >
+      <!-- Jumbotron Header -->
+
+          <h1>Ricerca farmaco</h1>
+          <p class="lead">Inserisci il nome o la categoria di un farmaco che vuoi cercare </p>
+
+          <form class="form-group" #drugform="ngForm" (ngSubmit)="onSubmit(drugform.value)" >
+              <div class="form-inline">
+                <input class="form-control" type="text" placeholder="Farmaco..." id="iFarmaco" name="farmaco" [(ngModel)]="farmaco" [ngModelOptions]="{standalone: true}" required>
+                <button type="submit" class="btn btn-primary "> Vai </button>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="options" id="inlineRadio1" value="Nome" ngModel required>
+                    <label class="form-check-label" for="inlineRadio1">Nome</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="options" id="inlineRadio2" value="Categoria" ngModel required>
+                    <label class="form-check-label" for="inlineRadio2">Categoria</label>
+                </div>
+
+
+
+
+        </form>
+
+
+
+      <!-- Page Features -->
+
+
+          <div class="row" *ngIf="visible">
+              <div class="col-lg-4 portfolio-item" *ngFor="let drug of this.r2">
+                <div class="card h-100" >
+                  <a routerLink='/drug-details' (click)="setOnClickDrugId(drug.farmaco)">
+                    <img class="card-img-top" src="{{drug.imgF}}" alt=""></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a routerLink='/drug-details' (click)="setOnClickDrugId(drug.farmaco)"
+                       >{{drug.farmaco}}</a>
+                    </h4>
+                    <p class="card-text ">{{drug.descrizioneF}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+  </div>
+      <!-- /.row -->
+
+

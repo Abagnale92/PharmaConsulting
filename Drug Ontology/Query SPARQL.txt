@@ -1,0 +1,363 @@
+Query sintomo:
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?farmaco ?sintomo ?descrizione ?imgF
+where{
+
+?farmaco farmaco:usatoPer ?sintomo.
+?farmaco farmaco:ImmagineFarmaco ?imgF.
+?farmaco farmaco:DescrizioneFarmaco ?descrizione.
+FILTER REGEX (?sintomo, "Mal_di_testa")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Ffarmaco+%3Fsintomo+%3Fdescrizione+%3FimgF%0D%0Awhere%7B%0D%0A%0D%0A%3Ffarmaco+farmaco%3AusatoPer+%3Fsintomo.%0D%0A%3Ffarmaco+farmaco%3AImmagineFarmaco+%3FimgF.%0D%0A%3Ffarmaco+farmaco%3ADescrizioneFarmaco+%3Fdescrizione.%0D%0AFILTER+REGEX+%28%3Fsintomo%2C+%22Mal_di_testa%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+----------------------------------------------------------------------
+Farmaco con dataproperty
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?nomeFarmaco ?descrizione ?imgF ?codiceF ?formato ?somministrazione ?dose ?ricetta ?prezzo ?produttore
+where{ 
+
+?nomeFarmaco farmaco:ImmagineFarmaco ?imgF;
+  	 farmaco:DescrizioneFarmaco ?descrizione;
+  	 farmaco:CodiceFarmaco ?codiceF;
+  	 farmaco:Formato ?formato;
+  	 farmaco:Somministrazione ?somministrazione;
+  	 farmaco:Dose ?dose;
+  	 farmaco:Ricetta ?ricetta;
+  	 farmaco:ËProdotto ?produttore;
+  	 farmaco:Prezzo ?prezzo.
+
+FILTER REGEX (?nomeFarmaco, "Tachipirina")
+
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Fdescrizione+%3FimgF+%3FcodiceF+%3Fformato+%3Fsomministrazione+%3Fdose+%3Fricetta+%3Fprezzo+%3Fproduttore%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3AImmagineFarmaco+%3FimgF%3B%0D%0A++farmaco%3ADescrizioneFarmaco+%3Fdescrizione%3B%0D%0A++farmaco%3ACodiceFarmaco+%3FcodiceF%3B%0D%0A++farmaco%3AFormato+%3Fformato%3B%0D%0A++farmaco%3ASomministrazione+%3Fsomministrazione%3B%0D%0A++farmaco%3ADose+%3Fdose%3B%0D%0A++farmaco%3ARicetta+%3Fricetta%3B%0D%0A++farmaco%3A%C3%A8Prodotto+%3Fproduttore%3B%0D%0A++farmaco%3APrezzo+%3Fprezzo.%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-----------------------------------------------------------------------
+
+farmaco con patologia:
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?farmaco ?patologia
+where{ 
+
+?farmaco farmaco:ËIndicato ?patologia
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Fpatologia%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3A%C3%A8Indicato+%3Fpatologia%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-----------------------------------------------------------------------
+farmaco con categoria
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?farmaco ?categoria
+where{ 
+
+?farmaco farmaco:ËdiCategoria ?categoria
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Fcategoria%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3A%C3%A8diCategoria+%3Fcategoria%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-----------------------------------------------------------------------
+
+farmaco con controindicazioni
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?farmaco ?controindicazioni
+where{ 
+
+?farmaco farmaco:ËControindicato ?controindicazioni
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Fcontroindicazioni%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3A%C3%A8Controindicato+%3Fcontroindicazioni%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+----------------------------------------------------------------------
+
+farmaco con effettocollaterale
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?farmaco ?effetto
+where{ 
+
+?farmaco farmaco:haEffettoCollaterale ?effetto
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Feffetto%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3AhaEffettoCollaterale+%3Feffetto%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+----------------------------------------------------------------------
+
+farmaco farmacie
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?farmaco ?farmacia
+where{ 
+
+?farmaco farmaco:siTrova ?farmacia
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Ffarmacia%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3AsiTrova+%3Ffarmacia%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-----------------------------------------------------------------------
+
+Medico prescrive farmaco:
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?farmaco ?medico
+where{ 
+
+?medico farmaco:Prescrive ?farmaco
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Ffarmaco+%3Fmedico%0D%0Awhere%7B+%0D%0A%0D%0A%3Fmedico+farmaco%3APrescrive+%3Ffarmaco%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-----------------------------------------------------------------------
+
+Patologia con descrizione, medico e struttura
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?patologia ?descrizioneP ?medico ?struttura ?telS ?indS
+where{ 
+
+?patologia farmaco:ËCurata ?medico;
+           farmaco:DescrizionePatologia ?descrizioneP;
+           farmaco:haStrutturaConsigliata ?struttura.
+
+?struttura farmaco:TelefonoStruttura ?telS;
+           farmaco:IndirizzoStruttura ?indS.
+
+
+FILTER REGEX (?patologia, "Influenza")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fpatologia+%3FdescrizioneP+%3Fmedico+%3Fstruttura+%3FtelS+%3FindS%0D%0Awhere%7B+%0D%0A%0D%0A%3Fpatologia+farmaco%3A%C3%A8Curata+%3Fmedico%3B%0D%0A+++++++++++farmaco%3ADescrizionePatologia+%3FdescrizioneP%3B%0D%0A+++++++++++farmaco%3AhaStrutturaConsigliata+%3Fstruttura.%0D%0A%0D%0A%3Fstruttura+farmaco%3ATelefonoStruttura+%3FtelS%3B%0D%0A+++++++++++farmaco%3AIndirizzoStruttura+%3FindS.%0D%0A%0D%0A%0D%0AFILTER+REGEX+%28%3Fpatologia%2C+%22Influenza%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+----------------------------------------------------------------------
+Patologia + card farmaci
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?patologia ?farmaco ?descrizioneF ?imgF
+where{ 
+
+?farmaco farmaco:ËIndicato ?patologia;
+           farmaco:DescrizioneFarmaco ?descrizioneF;
+           farmaco:ImmagineFarmaco ?imgF.
+
+FILTER REGEX (?patologia, "Influenza")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fpatologia+%3Ffarmaco+%3FdescrizioneF+%3FimgF%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3A%C3%A8Indicato+%3Fpatologia%3B%0D%0A+++++++++++farmaco%3ADescrizioneFarmaco+%3FdescrizioneF%3B%0D%0A+++++++++++farmaco%3AImmagineFarmaco+%3FimgF.%0D%0A%0D%0AFILTER+REGEX+%28%3Fpatologia%2C+%22Influenza%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+
+
+
+
+http://localhost:3030/dataset.html?tab=upload&ds=/Drugs#query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0A%0Aselect+DISTINCT+%3Fpatologia+%3Ffarmaco+%3FdescrizioneF+%3FimgF%0Awhere%7B+%0A%0A%3Ffarmaco+farmaco%3A%C3%A8Indicato+%3Fpatologia%3B%0A+++++++++++farmaco%3ADescrizioneFarmaco+%3FdescrizioneF%3B%0A+++++++++++farmaco%3AImmagineFarmaco+%3FimgF.%0A%0A++FILTER+REGEX+(str(%3Fpatologia)%2C+%22Influenza%22)%0A%7D
+
+
+
+
+
+-----------------------------------------------------------------------
+
+Produttore fornisce farmacia (num e indirizzo farmacia)
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?produttore ?farmacia ?telFarm ?IndFarm
+where{ 
+
+?produttore farmaco:Fornisce ?farmacia.
+
+?farmacia farmaco:TelefonoFarmacia ?telFarm.
+?farmacia farmaco:IndirizzoFarmacia ?IndFarm.
+
+FILTER REGEX (?produttore, "Angelini")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fproduttore+%3Ffarmacia+%3FtelFarm+%3FIndFarm%0D%0Awhere%7B+%0D%0A%0D%0A%3Fproduttore+farmaco%3AFornisce+%3Ffarmacia.%0D%0A%0D%0A%3Ffarmacia+farmaco%3ATelefonoFarmacia+%3FtelFarm.%0D%0A%3Ffarmacia+farmaco%3AIndirizzoFarmacia+%3FIndFarm.%0D%0A%0D%0AFILTER+REGEX+%28%3Fproduttore%2C+%22Angelini%22%29%0D%0A%7D%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+------------------------------------------------------------------------
+Ricerca per Principio Attivo
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?principio ?farmaco1 ?farmaco2 ?principiononcompatibile
+where{ 
+
+?principiononcompatibile farmaco:nonËCompatibile ?principio.
+
+?farmaco1 farmaco:haPrincipioAttivo ?principio.
+?farmaco2 farmaco:haPrincipioAttivo ?principiononcompatibile.
+
+FILTER REGEX (?principio, "Paracetamolo")
+}
+ORDER BY ?farmaco1
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fprincipio+%3Ffarmaco1+%3Ffarmaco2+%3Fprincipiononcompatibile%0D%0Awhere%7B+%0D%0A%0D%0A%3Fprincipiononcompatibile+farmaco%3Anon%C3%A8Compatibile+%3Fprincipio.%0D%0A%0D%0A%3Ffarmaco1+farmaco%3AhaPrincipioAttivo+%3Fprincipio.%0D%0A%3Ffarmaco2+farmaco%3AhaPrincipioAttivo+%3Fprincipiononcompatibile.%0D%0A%0D%0AFILTER+REGEX+%28%3Fprincipio%2C+%22Paracetamolo%22%29%0D%0A%7D%0D%0AORDER+BY+%3Ffarmaco1&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+---------------------------------------------------------------
+Ricerca per nome farmaco
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?principio ?farmaco1 ?farmaco2 ?principiononcompatibile
+where{ 
+
+?farmaco1 farmaco:haPrincipioAttivo ?principio.
+?principiononcompatibile farmaco:nonËCompatibile ?principio.
+?farmaco2 farmaco:haPrincipioAttivo ?principiononcompatibile.
+
+FILTER REGEX (?farmaco1, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fprincipio+%3Ffarmaco1+%3Ffarmaco2+%3Fprincipiononcompatibile%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco1+farmaco%3AhaPrincipioAttivo+%3Fprincipio.%0D%0A%3Fprincipiononcompatibile+farmaco%3Anon%C3%A8Compatibile+%3Fprincipio.%0D%0A%3Ffarmaco2+farmaco%3AhaPrincipioAttivo+%3Fprincipiononcompatibile.%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco1%2C+%22Tachipirina%22%29%0D%0A%7D%0D%0A%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+----------------------------------------------------------------------
+
+Principio Attivo (immagine + formula)
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?principio ?imgP ?formula
+where{ 
+  ?principio farmaco:Formula ?formula;
+  farmaco:ImmaginePrincipio ?imgP.
+
+FILTER REGEX (?principio, "Paracetamolo")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fprincipio+%3FimgP+%3Fformula%0D%0Awhere%7B+%0D%0A++%3Fprincipio+farmaco%3AFormula+%3Fformula%3B%0D%0A++farmaco%3AImmaginePrincipio+%3FimgP.%0D%0A%0D%0AFILTER+REGEX+%28%3Fprincipio%2C+%22Paracetamolo%22%29%0D%0A%7D%0D%0A%0D%0A%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+
+---------------------------------------------------------------------
+Ricerca per categoria
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?categoria ?farmaco ?imgF ?descrizioneF
+where{ 
+  ?farmaco farmaco:ËdiCategoria ?categoria.
+  ?farmaco farmaco:ImmagineFarmaco ?imgF.
+  ?farmaco farmaco:DescrizioneFarmaco ?descrizioneF.
+
+FILTER REGEX (?categoria, "Antibiotico")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fcategoria+%3Ffarmaco+%3FimgF+%3FdescrizioneF%0D%0Awhere%7B+%0D%0A++%3Ffarmaco+farmaco%3A%C3%A8diCategoria+%3Fcategoria.%0D%0A++%3Ffarmaco+farmaco%3AImmagineFarmaco+%3FimgF.%0D%0A++%3Ffarmaco+farmaco%3ADescrizioneFarmaco+%3FdescrizioneF.%0D%0A%0D%0AFILTER+REGEX+%28%3Fcategoria%2C+%22Antibiotico%22%29%0D%0A%7D%0D%0A%0D%0A%0D%0A&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+----------------------------------------------------------------------
+
+Ricerca per nome farmaco
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?farmaco ?imgF ?descrizioneF
+where{ 
+  ?farmaco farmaco:ImmagineFarmaco ?imgF;
+           farmaco:DescrizioneFarmaco ?descrizioneF.
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Ffarmaco+%3FimgF+%3FdescrizioneF%0D%0Awhere%7B+%0D%0A++%3Ffarmaco+farmaco%3AImmagineFarmaco+%3FimgF%3B%0D%0A+++++++++++farmaco%3ADescrizioneFarmaco+%3FdescrizioneF.%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+
+----------------------------------------------------------------------------
+
+Principio Attivo dato dal nome farmaco
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select DISTINCT ?principio ?farmaco ?imgP ?formula
+where{ 
+
+?farmaco farmaco:haPrincipioAttivo ?principio.
+?principio farmaco:ImmaginePrincipio ?imgP.
+?principio farmaco:Formula ?formula.
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+DISTINCT+%3Fprincipio+%3Ffarmaco+%3FimgP+%3Fformula%0D%0Awhere%7B+%0D%0A%0D%0A%3Ffarmaco+farmaco%3AhaPrincipioAttivo+%3Fprincipio.%0D%0A%3Fprincipio+farmaco%3AImmaginePrincipio+%3FimgP.%0D%0A%3Fprincipio+farmaco%3AFormula+%3Fformula.%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+--------------------------------------------------------------------------
+Produttore + indirizzo, tel, sito
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?produttore ?indP ?telP ?sitoP
+where{ 
+  ?produttore farmaco:IndirizzoProduttore ?indP;
+              farmaco:TelefonoProduttore ?telP;
+              farmaco:Sito ?sitoP.
+
+
+FILTER REGEX (?produttore, "Angelini")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Fproduttore+%3FindP+%3FtelP+%3FsitoP%0D%0Awhere%7B+%0D%0A++%3Fproduttore+farmaco%3AIndirizzoProduttore+%3FindP%3B%0D%0A++++++++++++++farmaco%3ATelefonoProduttore+%3FtelP%3B%0D%0A++++++++++++++farmaco%3ASito+%3FsitoP.%0D%0A%0D%0A%0D%0AFILTER+REGEX+%28%3Fproduttore%2C+%22Angelini%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-------------------------------------------------------------------------------------------
+Produttore fornisce solo nome farmacie
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?produttore ?farmacie
+where{ 
+  ?produttore farmaco:Fornisce ?farmacie.
+
+FILTER REGEX (?produttore, "Angelini")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Fproduttore+%3Ffarmacie%0D%0Awhere%7B+%0D%0A++%3Fproduttore+farmaco%3AFornisce+%3Ffarmacie.%0D%0A%0D%0AFILTER+REGEX+%28%3Fproduttore%2C+%22Angelini%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-------------------------------------------------------------------------------------------
+Produttore fornisce farmacie, telf, indf, orari
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?produttore ?farmacie ?indFarm ?telFarm ?orari
+where{ 
+  ?produttore farmaco:Fornisce ?farmacie.
+  ?farmacie farmaco:TelefonoFarmacia ?telFarm.
+  ?farmacie farmaco:IndirizzoFarmacia ?indFarm.
+  ?farmacie farmaco:Orari ?orari
+FILTER REGEX (?produttore, "Angelini")
+}
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Fproduttore+%3Ffarmacie+%3FindFarm+%3FtelFarm+%3Forari%0D%0Awhere%7B+%0D%0A++%3Fproduttore+farmaco%3AFornisce+%3Ffarmacie.%0D%0A++%3Ffarmacie+farmaco%3ATelefonoFarmacia+%3FtelFarm.%0D%0A++%3Ffarmacie+farmaco%3AIndirizzoFarmacia+%3FindFarm.%0D%0A++%3Ffarmacie+farmaco%3AOrari+%3Forari%0D%0AFILTER+REGEX+%28%3Fproduttore%2C+%22Angelini%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+-------------------------------------------------------------------------------------------
+Produttore + card farmaci
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?produttore ?farmaco
+where{ 
+  ?farmaco farmaco:ËProdotto ?produttore.
+  ?farmaco farmaco:ImmagineFarmaco ?imgF.
+  ?farmaco farmaco:DescrizioneFarmaco ?descrizione.
+
+FILTER REGEX (?produttore, "BAYER")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Fproduttore+%3Ffarmaco%0D%0Awhere%7B+%0D%0A++%3Ffarmaco+farmaco%3A%C3%A8Prodotto+%3Fproduttore.%0D%0A++%3Ffarmaco+farmaco%3AImmagineFarmaco+%3FimgF.%0D%0A++%3Ffarmaco+farmaco%3ADescrizioneFarmaco+%3Fdescrizione.%0D%0A%0D%0AFILTER+REGEX+%28%3Fproduttore%2C+%22BAYER%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+------------------------------------------------------------------------------------------
+Lista delle farmacie dove trovare il farmaco
+
+prefix farmaco: <http://www.semanticweb.org/drugs/ontology/drugsconsulting#>
+
+select ?farmacia ?indF ?telF ?orari
+where{ 
+  ?farmaco farmaco:siTrova ?farmacia.
+  ?farmacia farmaco:IndirizzoFarmacia ?indF.
+  ?farmacia farmaco:TelefonoFarmacia ?telF.
+  ?farmacia farmaco:Orari ?orari.
+
+FILTER REGEX (?farmaco, "Tachipirina")
+}
+
+http://localhost:8890/sparql?default-graph-uri=http%3A%2F%2Flocalhost%3A8890%2FDrugs&query=prefix+farmaco%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2Fdrugs%2Fontology%2Fdrugsconsulting%23%3E%0D%0A%0D%0Aselect+%3Ffarmacia+%3FindF+%3FtelF+%3Forari%0D%0Awhere%7B+%0D%0A++%3Ffarmaco+farmaco%3AsiTrova+%3Ffarmacia.%0D%0A++%3Ffarmacia+farmaco%3AIndirizzoFarmacia+%3FindF.%0D%0A++%3Ffarmacia+farmaco%3ATelefonoFarmacia+%3FtelF.%0D%0A++%3Ffarmacia+farmaco%3AOrari+%3Forari.%0D%0A%0D%0AFILTER+REGEX+%28%3Ffarmaco%2C+%22Tachipirina%22%29%0D%0A%7D&format=application%2Fsparql-results%2Bjson&timeout=0&signal_void=on&signal_unconnected=on&run=+Run+Query+
+------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
